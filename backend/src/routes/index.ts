@@ -1,0 +1,40 @@
+import { Router } from 'express';
+import authRoutes from '../modules/auth/auth.routes';
+import usersRoutes from '../modules/users/users.routes';
+import organizationsRoutes from '../modules/organizations/organizations.routes';
+import locationsRoutes from '../modules/locations/locations.routes';
+import categoriesRoutes from '../modules/categories/categories.routes';
+import manufacturersRoutes from '../modules/manufacturers/manufacturers.routes';
+import suppliersRoutes from '../modules/suppliers/suppliers.routes';
+import productsRoutes from '../modules/products/products.routes';
+import batchesRoutes from '../modules/batches/batches.routes';
+import inventoryRoutes from '../modules/inventory/inventory.routes';
+import purchasesRoutes from '../modules/purchases/purchases.routes';
+import salesRoutes from '../modules/sales/sales.routes';
+import expensesRoutes from '../modules/expenses/expenses.routes';
+import notificationsRoutes from '../modules/notifications/notifications.routes';
+import analyticsRoutes from '../modules/analytics/analytics.routes';
+import auditLogsRoutes from '../modules/audit-logs/audit-logs.routes';
+import platformRoutes from '../modules/platform/platform.routes';
+
+const router = Router();
+
+router.use('/platform', platformRoutes);
+router.use('/auth', authRoutes);
+router.use('/users', usersRoutes);
+router.use('/organizations', organizationsRoutes);
+router.use('/locations', locationsRoutes);
+router.use('/categories', categoriesRoutes);
+router.use('/manufacturers', manufacturersRoutes);
+router.use('/suppliers', suppliersRoutes);
+router.use('/products', productsRoutes);
+router.use('/batches', batchesRoutes);
+router.use('/inventory', inventoryRoutes);
+router.use('/purchases', purchasesRoutes);
+router.use('/sales', salesRoutes);
+router.use('/expenses', expensesRoutes);
+router.use('/notifications', notificationsRoutes);
+router.use('/analytics', analyticsRoutes);
+router.use('/audit-logs', auditLogsRoutes);
+
+export default router;

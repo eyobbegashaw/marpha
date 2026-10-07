@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0D9488;
+  --color-primary-hover: #0F766E;
+  --color-primary-light: #F0FDFA;
+  --color-primary-dark: #115E59;
+  
+  --color-secondary: #0F766E;
+  --color-secondary-hover: #115E59;
+  --color-secondary-light: #CCFBF1;
+  
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  --color-accent-light: #FEF3C7;
+  
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F8FAFC;
+  --color-surface-muted: #F1F5F9;
+  --color-border: #E2E8F0;
+  
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+}
+
+/* Custom Scrollbar for High-Speed Operational Tables & Sidebars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #0D9488);
+  outline-offset: 2px;
+}
+
+/* Animation utilities */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
